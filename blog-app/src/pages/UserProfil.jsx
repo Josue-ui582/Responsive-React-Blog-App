@@ -5,7 +5,7 @@ import { FaEdit } from 'react-icons/fa'
 import { FaCheck } from 'react-icons/fa'
 
 const UserProfil = () => {
-  const [avatar, setAvatar] = useState(avatar)
+  const [avatar, setAvatar] = useState(avatar6)
   return (
     <section className="profile">
       <div className="container profile__container">
