@@ -6,6 +6,11 @@ import { FaCheck } from 'react-icons/fa'
 
 const UserProfil = () => {
   const [avatar, setAvatar] = useState(avatar6)
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [currentPassword, setCurrentPassword] = useState('')
+  const [newPassword, setNewPassword] = useState('')
+  const [confirmNewPassword, setconfirmNewPassword] = useState('')
   return (
     <section className="profile">
       <div className="container profile__container">
@@ -29,7 +34,12 @@ const UserProfil = () => {
             <p className='form__error-message'>
               This is an error message
             </p>
-            <input type="text" />
+            <input type="text" placeholder='Full name' value={name} onChange={(e) => setName(e.target.value)} />
+            <input type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input type="password" placeholder='Current password' value={currentPassword} onChange={(e) => setCurrentPassword(e.target.value)} />
+            <input type="password" placeholder='New password' value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
+            <input type="password" placeholder='Confirm new password' value={confirmNewPassword} onChange={(e) => setconfirmNewPassword(e.target.value)} />
+            <button type='submit' className='btn primary'>Update details</button>
           </form>
         </div>
       </div>
